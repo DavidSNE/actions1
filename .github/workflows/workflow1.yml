@@ -8,6 +8,8 @@ jobs:
     uses: DavidSNE/actions2/.github/workflows/reusable-workflow.yml@master
   set-variable:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: set-version
         run:   gh variable set TEST_VAR --body "Set from workflow"
