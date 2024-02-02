@@ -11,5 +11,6 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
+      - uses: actions/checkout@v4
       - name: set-version
         run:   gh variable set TEST_VAR --body "Set from workflow"
