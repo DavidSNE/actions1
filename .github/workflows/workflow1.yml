@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: call workflow
-        uses: DavidSNE/actions2/actions/workflows/reusable-workflow.yml@master
+        uses: DavidSNE/actions2/.github/workflows/reusable-workflow.yml@master
