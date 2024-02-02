@@ -5,5 +5,6 @@ on:
 
 jobs:
   use-workflow:
-    - name: call workflow
-      run: echo Running other workflow
+    steps:
+      - name: call workflow
+        run: echo Running other workflow
