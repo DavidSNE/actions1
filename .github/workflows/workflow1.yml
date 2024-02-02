@@ -6,3 +6,6 @@ on:
 jobs:
   use-workflow:
     uses: DavidSNE/actions2/.github/workflows/reusable-workflow.yml@master
+  set-variable:
+    - name: set-version
+      run:   gh variable set TEST_VAR --body "Set from workflow"
