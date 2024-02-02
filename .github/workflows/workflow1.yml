@@ -5,6 +5,7 @@ on:
 
 jobs:
   use-workflow:
+    runs-on: ubuntu-latest
     steps:
       - name: call workflow
         run: echo Running other workflow
