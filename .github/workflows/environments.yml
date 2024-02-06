@@ -9,6 +9,7 @@ jobs:
     env:
       context: ${{ toJSON(github) }}
       obj2: ${{ toJSON(secrets) }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN}}
     steps:
       - name: verify environment exists
         run: |  
