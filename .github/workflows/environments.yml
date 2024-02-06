@@ -12,5 +12,5 @@ jobs:
       - name: verify environment exists
         run: | 
           echo $context
-          echo  ${{ runner }}
-          echo ${{ secrets }}
+          echo  ${{ toJSON(runner) }}
+          echo ${{ toJSON(secrets) }}
