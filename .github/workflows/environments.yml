@@ -10,4 +10,6 @@ jobs:
       context: ${{ toJSON(github) }}
     steps:
       - name: verify environment exists
-        run: echo $context
+        run: | 
+          echo $context
+          echo $env
