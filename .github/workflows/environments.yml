@@ -5,5 +5,7 @@ on:
 
 jobs:
   verify_environment:
-    - name: verify environment exists
-      run: echo ${{ github }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: verify environment exists
+        run: echo ${{ github }}
