@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       context: ${{ toJSON(github) }}
-      env: ${{ toJSON(env) }}
+#      env: ${{ toJSON(env) }}
       runner: ${{ toJSON(runner) }}
       secrets: ${{ toJSON(secrets) }}
     steps:
       - name: verify environment exists
         run: | 
           echo $context
-          echo $env
+#          echo $env
           echo $runner
           echo $secrets
