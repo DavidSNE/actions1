@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       context: ${{ toJSON(github) }}
+      env: ${{ toJSON(env) }}
     steps:
       - name: verify environment exists
         run: | 
