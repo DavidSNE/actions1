@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       context: ${{ toJSON(github) }}
+      obj1: ${{ toJSON(runner) }}
+      obj2: ${{ toJSON(secrets) }}
     steps:
       - name: verify environment exists
         run: | 
           echo $context
-          echo  ${{ toJSON(runner) }}
-          echo ${{ toJSON(secrets) }}
+          echo $obj1
+          echo $obj2
