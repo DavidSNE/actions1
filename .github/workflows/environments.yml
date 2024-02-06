@@ -6,6 +6,8 @@ on:
 jobs:
   verify_environment:
     runs-on: ubuntu-latest
+    env:
+      context: ${{ toJSON(github) }}
     steps:
       - name: verify environment exists
-        run: echo ${{ toJSON(github) }}
+        run: echo $context
