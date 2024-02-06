@@ -1,0 +1,9 @@
+name: verify environment
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  verify_environment:
+    - name: verify environment exists
+      run: echo ${{ github }}
