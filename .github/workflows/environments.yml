@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: verify environment exists
-        run: echo ${{ github }}
+        run: echo ${{ toJSON(github) }}
