@@ -11,9 +11,12 @@ jobs:
       obj2: ${{ toJSON(secrets) }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN}}
     steps:
-      - name: verify environment exists
-        run: |  
+      - name: Get environment
+        run: |
           gh api \
           -H "Accept: application/vnd.github+json" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
           /repos/DavidSNE/actions1/environments
+      - name: create environment
+        run: |
+          curl -L -X PUT -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ $GH_TOKEN }}" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/DavidSNE/actions1/environments/prod -d '{"wait_timer":30,"prevent_self_review":false,"reviewers":[{"type":"User","id":57226990}]}'
