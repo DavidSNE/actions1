@@ -4,6 +4,11 @@ on:
   push:
 
 jobs:
+  create_test_environment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/create-environment
+
   deploy_test:
     runs-on: ubuntu-latest
     environment: test
