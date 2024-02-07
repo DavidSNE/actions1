@@ -1,4 +1,10 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const exec = require('@actions/exec');
 
-console.log('Hello Javascript!');
+function run() {
+    core.notice("Hello Javascript action");
+
+}
+
+run();
