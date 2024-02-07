@@ -3,13 +3,15 @@ on:
   workflow_dispatch:
   push:
 
+permissions: write-all
+
 jobs:
   create_test_environment:
     runs-on: ubuntu-latest
     steps:
       - uses: thijsvtol/create-environments@3.0
         with:
-          token: ${{ secrets.GH_TOKEN}}
+          token: ${{ secrets.GITHUB_TOKEN}}
           repo: ${{ github.repository }}
           environments: myenv
 
